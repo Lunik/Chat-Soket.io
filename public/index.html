@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no"/>
+  <title>Socket.io Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="pages">
+    <li class="chat page">
+      <div class="chatArea">
+        <div class="announce" id="announceDiv" style="display:none;"></div>
+		  <div class="smiley_body" id="smiley_list" style="opacity:0; display:none;">
+			<span class="Lsmiley" ></span>
+		  </div>
+		  <input class="but_smiley" type="submit" value="Smiley"/>
+        <div class="connected_body" id="co_list" style="opacity:0; display:none;">
+          <span class="connected" ></span>
+	      </div>
+		  <input class="but_co" type="submit" value="Connected"/>
+        <ul class="messages"></ul>
+      </div>
+        <input class="inputMessage" placeholder="Ecrire ici..." list="smiley"/>
+        <datalist class="smileyProposal" id="smiley"></datalist>
+        <span class="but_sound" id="unmute"></span>
+    </li>
+    <li class="login page">
+      <div class="form">
+        <h3 class="title">Username ?</h3>
+          <input class="usernameInput" type="text" maxlength="14" />
+        <div id="msg_form"></div>
+      </div>
+    </li>
+  </ul>
+
+  <script src="js/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="js/json2.js"></script>
+  <script type="text/javascript" src="js/oXHR.js"></script>
+  <script type="text/javascript" src="js/howler.min.js"></script>
+  <script src="/main.js">
+  </script>
+</body>
+</html>
